@@ -10,39 +10,35 @@ body {
     background-color: #b6bcb9;
 }
 
+/* Header Section */
 header {
     position: relative;
     height: 1000px;
     background: url('https://i.postimg.cc/Zn7P1fqK/header-image.jpg') no-repeat center center/cover;
-    /* background-size: var(#); */
-    /* Replace 'header-image.jpg' with your image file */
 }
 
 .header-content {
     height: 100%;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
-    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    padding: 20px 10%; /* Use percentage for responsive padding */
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .logo img {
-    height: 50px; /* Adjust as needed */
+    height: 50px;
 }
 
 ul {
     list-style: none;
     display: flex;
-    justify-content: space-between;
 }
 
 ul li {
@@ -58,14 +54,14 @@ ul li a {
 }
 
 ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* On hover effect */
+    background-color: rgba(255, 255, 255, 0.2);
     border-radius: 5px;
 }
 
 .header-buttons {
     position: absolute;
-    bottom: 50px;
-    right: 50px;
+    bottom: 70px;
+    right: 60px;
     display: flex;
 }
 
@@ -85,32 +81,15 @@ ul li a:hover {
     background-color: #f1f1f1;
 }
 
-.header-buttons .btn {
-    padding: 10px 20px;
-    margin-left: 10px;
-    background-color: #ffffff;
-    border: solid black 1px;
-    border-radius: 5px;
-    color: #333;
-    font-size: 16px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.header-buttons .btn:hover {
-    background-color: #c21616;
-    
-    transform: scale(1.05); /* Slightly enlarge the button */
-}
+/* Card Section */
 .card-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     width: 100%;
-    /* height: 100px; */
 }
 
-.advDiv{
+.advDiv {
     display: flex;
 }
 
@@ -121,7 +100,7 @@ ul li a:hover {
     padding: 20px;
     flex: 1;
     min-width: 300px;
-    margin: 20px 20px 20px 20px;
+    margin: 20px;
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
@@ -140,13 +119,14 @@ ul li a:hover {
     line-height: 1.6;
 }
 
+/* Contact Form */
 .contact-form-container {
-    background-color: rgb(168 185 190);
+    background-color: rgb(168, 185, 190);
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-    margin: 50px auto; /* Centering with margin */
+    margin: 50px auto;
 }
 
 .contact-form-container h2 {
@@ -196,17 +176,19 @@ input:focus {
 .btn-submit:hover {
     background-color: #0056b3;
 }
-.adv{
+
+.adv {
     text-align: center;
     margin-bottom: 45px;
     font-size: 50px;
-    margin: 45px 45px 45px 45px;
+    margin: 45px;
 }
+
+/* FAQ Section */
 .faq-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60vh;
     padding: 20px;
 }
 
@@ -252,6 +234,8 @@ input:focus {
     height: 500px;
     border-radius: 40px;
 }
+
+/* Comment Section */
 .comment-section {
     width: 50%;
     margin: 50px auto;
@@ -311,26 +295,94 @@ input:focus {
 .comment strong {
     color: #333;
 }
+
+/* Footer Section */
 .footer {
     background-color: #333;
     color: white;
     padding: 20px;
     text-align: center;
-    /* position: absolute; */
     width: 100%;
-    bottom: 0;
 }
 
-.footer-content p {
-    margin: 5px 0;
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .header-buttons {
+        position: static; /* Adjust button position */
+        margin-top: 10px;
+    }
+
+    .faq-container {
+        flex-direction: column; /* Stack FAQ content */
+        align-items: center;
+        height: auto; /* Adjust height */
+    }
+
+    .faq-content {
+        width: 100%; /* Full width for smaller screens */
+        padding-right: 0; /* Remove padding */
+    }
+
+    .faq-image {
+        width: 100%; /* Full width for image */
+        margin-top: 20px; /* Add some margin */
+    }
+
+    .comment-section {
+        width: 90%; /* Wider on smaller screens */
+    }
+
+    .contact-form-container {
+        width: 90%; /* Wider on smaller screens */
+    }
+
+    .card-container {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center cards */
+    }
+
+    .card {
+        width: 90%; /* Full width for cards */
+        margin: 10px 0; /* Reduce margin */
+    }
 }
 
-.footer-email {
-    color: #ff6347;
-    text-decoration: none;
-    font-weight: bold;
-}
+@media (max-width: 480px) {
+    .faq-heading {
+        font-size: 36px; /* Reduce heading size */
+    }
 
-.footer-email:hover {
-    text-decoration: underline;
+    .adv {
+        font-size: 30px; /* Reduce font size */
+    }
+
+    .comment-section {
+        width: 100%; /* Full width for comment section */
+    }
+
+    .header-buttons .btn {
+        padding: 8px 15px; /* Smaller button size */
+        font-size: 14px; /* Reduce font size */
+    }
+
+    ul li {
+        margin: 0 10px; /* Reduce margin */
+    }
+
+    input,
+    #comment-input {
+        font-size: 14px; /* Reduce input font size */
+    }
+
+    .btn-submit,
+    .submit-comment {
+        padding: 8px 15px; /* Smaller button size */
+        font-size: 14px; /* Reduce font size */
+    }
 }

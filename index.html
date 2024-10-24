@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header with Transparent Navbar and Buttons</title>
-        <link rel="icon" type="image/png" href="https://i.postimg.cc/d19j9QPC/blood.png" />
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/d19j9QPC/blood.png" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,89 +23,88 @@
                 </ul>
             </nav>
             <div class="header-buttons">
-                
-                <button class="btn">Log In</button>
+                <button class="btn" aria-label="Log In">Log In</button>
             </div>
         </div>
     </header>
-    <p class="adv"> Advantages</p>
-    <div class="advDiv">
-        <div class="card-container">
-            <div class="card">
-                <h3>Save Lives</h3>
-                <p>Every two seconds, someone in the U.S. needs blood. It could be because of surgery or cancer treatments. Or maybe they have a blood disorder or have lost a lot of blood. Whatever the reason, there’s always a need for donated blood. Even a single donation can save lives.Blood gives us energy by bringing oxygen and nutrients to the body’s cells. It also carries waste products to the liver and kidneys for removal..</p>
-            </div>
-            <div class="card">
-                <h3>Improve Heart Health</h3>
-                <p>Regular blood donations can help reduce harmful iron levels, improving your heart health.Regular blood donation is linked to lower blood pressure and a lower risk for heart attacks. It definitely helps to reduce cardiovascular risk factors.If your hemoglobin is too high, blood donation helps to lower the viscosity of the blood, which has been associated with the formation of blood clots, heart attacks, and stroke.</p>
-            </div>
-            <div class="card">
-                <h3>A happier, longer life</h3>
-                <p>Each donation provides a mini health screening, helping you monitor your overall well-being.One blood donation can save up to three lives, according to DeSimone. People usually donate because it feels good to help others, and altruism and volunteering have been linked to positive health outcomes, including a lower risk for depression and greater longevity.</p>
-            </div>
-        </div>
-    </div>
+
     <main>
-        <div class="faq-container">
+        <h2 class="adv">Advantages</h2>
+        <section class="advDiv">
+            <div class="card-container">
+                <article class="card">
+                    <h3>Save Lives</h3>
+                    <p>Every two seconds, someone in the U.S. needs blood. It could be because of surgery or cancer treatments. Or maybe they have a blood disorder or have lost a lot of blood. Whatever the reason, there’s always a need for donated blood. Even a single donation can save lives. Blood gives us energy by bringing oxygen and nutrients to the body’s cells. It also carries waste products to the liver and kidneys for removal.</p>
+                </article>
+                <article class="card">
+                    <h3>Improve Heart Health</h3>
+                    <p>Regular blood donations can help reduce harmful iron levels, improving your heart health. Regular blood donation is linked to lower blood pressure and a lower risk for heart attacks. It definitely helps to reduce cardiovascular risk factors. If your hemoglobin is too high, blood donation helps to lower the viscosity of the blood, which has been associated with the formation of blood clots, heart attacks, and stroke.</p>
+                </article>
+                <article class="card">
+                    <h3>A Happier, Longer Life</h3>
+                    <p>Each donation provides a mini health screening, helping you monitor your overall well-being. One blood donation can save up to three lives, according to DeSimone. People usually donate because it feels good to help others, and altruism and volunteering have been linked to positive health outcomes, including a lower risk for depression and greater longevity.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="faq-container">
             <div class="faq-content">
                 <h1 class="faq-heading">Frequently Asked Questions</h1>
                 <div class="faq-section">
-                    <button class="faq-question">What is your return policy?</button>
-                    <button class="faq-question">How do I track my order?</button>
-                    <button class="faq-question">Can I purchase items again?</button>
-                    <button class="faq-question">How do I contact support?</button>
+                    <button class="faq-question" aria-label="What is your return policy?">What is your return policy?</button>
+                    <button class="faq-question" aria-label="How do I track my order?">How do I track my order?</button>
+                    <button class="faq-question" aria-label="Can I purchase items again?">Can I purchase items again?</button>
+                    <button class="faq-question" aria-label="How do I contact support?">How do I contact support?</button>
                 </div>
             </div>
             <div class="faq-image">
-                <img src="https://i.postimg.cc/MZdYMGY2/questions.jpg" alt="questions">
+                <img src="https://i.postimg.cc/MZdYMGY2/questions.jpg" alt="Illustration of FAQs" loading="lazy">
+            </div>
+        </section>
+
+        <section>
+            <div class="contact-form-container">
+                <h2>Get in Touch with Us</h2>
+                <form id="registration-form" aria-labelledby="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                    <button type="submit" class="btn-submit">Register</button>
+                </form>
+            </div>
+        </section>
+
+        <div class="comment-section">
+            <h2>Comments</h2>
+            <div class="comment-form">
+                <textarea id="comment-input" rows="4" placeholder="Write a comment..."></textarea>
+                <button class="submit-comment">Post Comment</button>
+            </div>
+            <div class="comment-list">
+                <div class="comment">
+                    <p><strong>John Doe:</strong> This is a great post! Really helpful.</p>
+                </div>
+                <div class="comment">
+                    <p><strong>Jane Smith:</strong> I totally agree with John! Thanks for sharing.</p>
+                </div>
             </div>
         </div>
     </main>
-    <section>
-        <div class="contact-form-container">
-            <h2>Get in Touch with Us</h2>
-            <form id="registration-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
-        
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-        
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-        
-                <button type="submit" class="btn-submit">Register</button>
-            </form>
-        </div>
-    </section>
-    <div class="comment-section">
-        <h2>Comments</h2>
 
-        
-        <div class="comment-form">
-            <textarea id="comment-input" rows="4" placeholder="Write a comment..."></textarea>
-            <button class="submit-comment">Post Comment</button>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>For more information or to contact us, email us at 
+                <a href="mailto:info@bloodlife.com" class="footer-email">info@bloodlife.com</a>
+            </p>
+            <p>&copy; 2024 BloodLife. All rights reserved.</p>
         </div>
-
-        <div class="comment-list">
-            <div class="comment">
-                <p><strong>John Doe:</strong> This is a great post! Really helpful.</p>
-            </div>
-            <div class="comment">
-                <p><strong>Jane Smith:</strong> I totally agree with John! Thanks for sharing.</p>
-            </div>
-        </div>
-    </div>
-    <div class ="footwear">
-        <footer class="footer">
-            <div class="footer-content">
-                <p>For more information or to contact us, email us at 
-                    <a href="mailto:info@bloodlife.com" class="footer-email">info@bloodlife.com</a>
-                </p>
-                <p>&copy; 2024 BloodLife. All rights reserved.</p>
-            </div>
-        </footer>
-    </div>
+    </footer>
 
 </body>
 </html>
